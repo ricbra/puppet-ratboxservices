@@ -1,0 +1,38 @@
+service "userserv" {
+    nick = "<%= nick %>";
+    username = "<%= user %>";
+    host = "<%= host %>";
+    realname = "<%= realname %>";
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+    loglevel = <%= param_loglevel %>;
+<% if disable_register -%>
+    disable_register = <%= disable_register %>;
+<% end -%>
+<% if register_url -%>
+    register_url = <%= register_url %>;
+<% end -%>
+    register_time = <%= register_time %>;
+    register_amount = <%= register_amount %>;
+    host_register_time = <%= host_register_time %>;
+    host_register_amount = <%= host_register_amount %>;
+    register_email = <%= register_email %>;
+    register_verify = <%= register_verify %>;
+    expire_time = <%= expire_time %>;
+    expire_suspended_time = <%= expire_suspended_time %>;
+    expire_unverified_time = <%= expire_unverified_time %>;
+    expire_bonus_regtime = <%= expire_bonus_regtime %>;
+    expire_bonus = <%= expire_bonus %>;
+    expire_bonus_per_time = <%= expire_bonus_per_time %>;
+    expire_bonus_max = <%= expire_bonus_max %>;
+    allow_set_password = <%= allow_set_password %>;
+    allow_resetpass = <%= allow_resetpass %>;
+    allow_resetemail = <%= allow_resetemail %>;
+    resetpass_duration = <%= resetpass_duration %>;
+    resetemail_duration = <%= resetemail_duration %>;
+    reset_regtime_duration = <%= reset_regtime_duration %>;
+    allow_set_email = <%= allow_set_email %>;
+    max_logins = <%= max_logins %>;
+    show_suspend_reasons = <%= show_suspend_reasons %>;
+};

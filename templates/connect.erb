@@ -1,0 +1,10 @@
+connect "<%= name %>" {
+    /* host: the host to connect to */
+    host = "<%= host %>";
+<% if vhost -%>
+    vhost = "<%= vhost %>";
+<% end -%>
+    password = "<%= password %>";
+    port = <%= port %>;
+    autoconn = <%= autoconn %>;
+};

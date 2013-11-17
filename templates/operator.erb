@@ -1,0 +1,34 @@
+operator "<%= name %>" {
+<% Array(users).each do |user| -%>
+    user = "<%= user -%>";
+<% end -%>
+    password = "<%= password %>";
+    encrypted = <%= encrypted %>;
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+<% if userserv and ! userserv.empty? -%>
+    userserv = <%= Array(userserv).join(', ') %>;
+<% end -%>
+<% if chanserv and ! chanserv.empty? -%>
+    chanserv = <%= Array(chanserv).join(', ') %>;
+<% end -%>
+<% if nickserv and ! nickserv.empty? -%>
+    nickserv = <%= Array(nickserv).join(', ') %>;
+<% end -%>
+<% if operserv and ! operserv.empty? -%>
+    operserv = <%= Array(operserv).join(', ') %>;
+<% end -%>
+<% if operbot and ! operbot.empty? -%>
+    operbot = <%= Array(operbot).join(', ') %>;
+<% end -%>
+<% if global and ! global.empty? -%>
+    global = <%= Array(global).join(', ') %>;
+<% end -%>
+<% if jupeserv and ! jupeserv.empty? -%>
+    jupeserv = <%= Array(jupeserv).join(', ') %>;
+<% end -%>
+<% if banserv and ! banserv.empty? -%>
+    banserv = <%= Array(banserv).join(', ') %>;
+<% end -%>
+};

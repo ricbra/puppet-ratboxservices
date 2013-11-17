@@ -1,0 +1,27 @@
+service "chanserv" {
+    nick = "<%= nick %>";
+    username = "<%= username %>";
+    host = "<%= host %>";
+    realname = "<$= realname %>";
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+    flags = opered, login_help;
+    loglevel = <%= param_loglevel %>;
+<% if disable_register -%>
+    disable_register = <%= disable_register %>;
+<% end -%>
+    register_time = <%= register_time %>;
+    register_amount = <%= register_amount %>;
+    host_register_time = <%= host_register_time %>;
+    host_register_amount = <%= host_register_amount %>;
+    expire_time = <%= expire_time %>;
+    expire_suspended_time = <%= expire_suspended_time %>;
+    max_bans = <%= max_bans %>;
+    expireban_frequency = <%= expireban_frequency %>;
+    enforcetopic_frequency = <%= enforcetopic_frequency %>;
+    autojoin_empty = <%= autojoin_empty %>;
+    email_delowner = <%= email_delowner %>;
+    delowner_duration = <%= delowner_duration %>;
+    show_suspend_reasons = <%= show_suspend_reasons %>;
+};

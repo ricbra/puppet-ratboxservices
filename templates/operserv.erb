@@ -1,0 +1,12 @@
+service "operserv" {
+    nick = "<%= nick %>";
+    username = "<%= username %>";
+    host = "<%= host %>";
+    realname = "<%= realname %>";
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+    loglevel = <%= param_loglevel %>;
+    allow_die = <%= allow_die = yes; %>;
+};
+

@@ -1,0 +1,15 @@
+service "jupeserv" {
+    nick = "<%= nick %>";
+    username = "<%= username %>";
+    host = "<%= host %>";
+    realname = "<%= realname %>";
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+    loglevel = <%= param_loglevel %>;
+    merge_into_operserv = <%= merge_into_operserv %>;
+    oper_score = <%= oper_score %>;
+    jupe_score = <%= jupe_score %>;
+    unjupe_score = <%= unjupe_score %>;
+    pending_time = <%= pending_time %>;
+};

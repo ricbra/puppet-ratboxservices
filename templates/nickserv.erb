@@ -1,0 +1,13 @@
+service "nickserv" {
+    nick = "<%= nick %>";
+    username = "<%= username %>";
+    host = "<%= host %>";
+    realname = "<%= realname %>";
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+    loglevel = <%= param_loglevel %>;
+    max_nicks = <%= max_nicks %>;
+    allow_set_warn = <%= allow_set_warn %>;
+    warn_string = "<%= warn_string %>";
+};

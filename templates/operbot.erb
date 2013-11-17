@@ -1,0 +1,10 @@
+service "operbot" {
+    nick = "<%= nick %>";
+    username = "<%= username %>";
+    host = "<%= host %>";
+    realname = "<%= realname %>";
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+    loglevel = <%= param_loglevel %>;
+};
